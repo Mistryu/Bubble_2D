@@ -18,6 +18,7 @@ public class Main {
     }
 
     /* This method takes an int[][] array that cannot be null, have different length of sets or contain empty sets
+     *  If any of the above cases happen than the method throws IllegalArgumentException
      *
      * This method works on a principle of Bubble sort and achieves O(n^2)
      * It treats the 2D array as 1D one
@@ -40,7 +41,7 @@ public class Main {
         if (length_of_el == 0) throw new IllegalArgumentException("Elements of the array cannot be null");
 
         for (int[] a : arr) {
-            if (a.length != length_of_el) throw new IllegalArgumentException("Elements of the array cannot be null");
+            if (a.length != length_of_el) throw new IllegalArgumentException("Elements of the array cannot have different length");
         }
 
         while (true) {
