@@ -1,5 +1,5 @@
 *
-!*.idea
-!*.out
-!*.Bubble_2D.iml
+*.idea
+*.out
+*.Bubble_2D.iml
 */
