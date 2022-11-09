@@ -2,19 +2,24 @@ import java.util.Arrays;
 
 public class Main {
     public static void main(String[] args) {
-        // Simple test cases
-//        int[][] arr = {{9, 8, 7, 6, 5, 4}, {19, 18, 17, 16, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
+        // Test cases
+//        int[][] arr = {{9, 8, 7, 6, 5, 4}, {19, 18, 17, 17, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
 //        int[][] arr1 = {{1, 1, 1, 1}, {0, 0, 0, 0}};
 //        int[][] arr2 = {{0, 0}, {0, 0}};
 //        int[][] arr3 = {{-1, -10, -15}, {-82, -100, -20}, {20, 1, 0}};
-//        int[][] arr4 = {{}, {}, {}};
+//        int[][] arr4 = {{9, 8, 7, 6, 5}, {19, 18, 17, 16, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
 //        System.out.println(Arrays.deepToString(bubble_2D(arr)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr1)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr2)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr3)));
-//        System.out.println(Arrays.deepToString(bubble_2D(null)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr4)));
+//        System.out.println(Arrays.deepToString(bubble_2D(null)));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[][]{{}, {}, {}})));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[0][0])));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[0][1])));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[1][0])));
+//        System.out.println(Arrays.deepToString(new int[2][2]));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[1][1])));
     }
 
     /* This method takes an int[][] array that cannot be null, have different length of sets or contain empty sets
@@ -32,7 +37,10 @@ public class Main {
 
     private static int[][] bubble_2D(int[][] arr) {
 
-        if (arr == null) throw new IllegalArgumentException("Array provided was null");
+        if (arr == null || Arrays.deepEquals(arr, new int[0][0])){
+            throw new IllegalArgumentException("Array provided was null or contained no elements");
+        }
+        if (Arrays.deepEquals(arr, new int[1][1])) return arr;
 
         int length = arr.length;
         int length_of_el = arr[0].length;   //All elements have the same length
