@@ -3,23 +3,25 @@ import java.util.Arrays;
 public class Main {
     public static void main(String[] args) {
         // Test cases
-//        int[][] arr = {{9, 8, 7, 6, 5, 4}, {19, 18, 17, 17, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
-//        int[][] arr1 = {{1, 1, 1, 1}, {0, 0, 0, 0}};
-//        int[][] arr2 = {{0, 0}, {0, 0}};
-//        int[][] arr3 = {{-1, -10, -15}, {-82, -100, -20}, {20, 1, 0}};
-//        int[][] arr4 = {{9, 8, 7, 6, 5}, {19, 18, 17, 16, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
-//        System.out.println(Arrays.deepToString(bubble_2D(arr)));
-//        System.out.println(Arrays.deepToString(bubble_2D(arr1)));
-//        System.out.println(Arrays.deepToString(bubble_2D(arr2)));
-//        System.out.println(Arrays.deepToString(bubble_2D(arr3)));
+        int[][] arr = {{9, 8, 7, 6, 5, 4}, {19, 18, 17, 17, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
+        int[][] arr1 = {{1, 1, 1, 1}, {0, 0, 0, 0}};
+        int[][] arr2 = {{0, 0}, {0, 0}};
+        int[][] arr3 = {{-1, -10, -15}, {-82, -100, -20}, {20, 1, 0}};
+        int[][] arr4 = {{9, 8, 7, 6, 5}, {19, 18, 17, 16, 15, 14}, {24, 25, 26, 27, 28, 29}, {0, 1, 2, 3, 30, 100}};
+        System.out.println(Arrays.deepToString(bubble_2D(arr)));
+        System.out.println(Arrays.deepToString(bubble_2D(arr1)));
+        System.out.println(Arrays.deepToString(bubble_2D(arr2)));
+        System.out.println(Arrays.deepToString(bubble_2D(arr3)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr4)));
 //        System.out.println(Arrays.deepToString(bubble_2D(null)));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[][]{{}, {}, {}})));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[0][0])));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[0][1])));
+//
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[1][0])));
 //        System.out.println(Arrays.deepToString(new int[2][2]));
-//        System.out.println(Arrays.deepToString(bubble_2D(new int[1][1])));
+        System.out.println(Arrays.deepToString(bubble_2D(new int[1][1])));
+        System.out.println(Arrays.deepToString(bubble_2D(new int[2][1])));
     }
 
     /* This method takes an int[][] array that cannot be null, have different length of sets or contain empty sets
