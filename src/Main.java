@@ -12,15 +12,18 @@ public class Main {
 //        System.out.println(Arrays.deepToString(bubble_2D(arr1)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr2)));
 //        System.out.println(Arrays.deepToString(bubble_2D(arr3)));
+//        System.out.println(Arrays.deepToString(new int[2][2]));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[1][1])));
+//        System.out.println(Arrays.deepToString(bubble_2D(new int[2][1])));
+
+
+//        //Tests that throw an exception
 //        System.out.println(Arrays.deepToString(bubble_2D(arr4)));
 //        System.out.println(Arrays.deepToString(bubble_2D(null)));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[][]{{}, {}, {}})));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[0][0])));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[0][1])));
 //        System.out.println(Arrays.deepToString(bubble_2D(new int[1][0])));
-//        System.out.println(Arrays.deepToString(new int[2][2]));
-//        System.out.println(Arrays.deepToString(bubble_2D(new int[1][1])));
-//        System.out.println(Arrays.deepToString(bubble_2D(new int[2][1])));
     }
 
     /* This method takes an int[][] array that cannot be null, have different length of sets or contain empty sets
@@ -31,8 +34,8 @@ public class Main {
      * We iterate through it from [0][0] -> ending_point[x][y]
      * The ending point starts at the last element of the last set and goes to [0][0]
      * This is what allows us to achieve Bubble sort speed since we reduce the number of elements
-     * we iterate through by 1 each full iteration
      * When ending_point reaches [0][0] the method returns sorted array
+     * The array is sorted from small -> big
      *
      * */
 
@@ -78,7 +81,7 @@ public class Main {
             if (ending_point[0] == 0 && ending_point[1] == 0) { // We went through the entire array and it's sorted
                 return arr;
             }
-            if (ending_point[1] < 0) {   // Changing the ending point to a lower row
+            if (ending_point[1] < 0) {   // Changing the ending point to a smaller one
                 ending_point[0]--;
                 ending_point[1] = length_of_el;
             }
